@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: center;
   background: #121212;
-  color: #E0E0E0;
-  font-family: 'Fira Code Light', monospace;
+  color: #e0e0e0;
+  font-family: "Fira Code Light", monospace;
 
   .content-box {
     text-align: center;
@@ -23,7 +23,7 @@
     p {
       margin-bottom: 2rem;
       font-size: 1rem;
-      color: #BDBDBD;
+      color: #bdbdbd;
     }
 
     .buttons {

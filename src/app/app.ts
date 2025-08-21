@@ -6,7 +6,7 @@ import { ThemeSwitcher } from './shared/components/theme-switcher/theme-switcher
   selector: 'app-root',
   imports: [RouterOutlet, ThemeSwitcher],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected title = 'BudgetManager';
