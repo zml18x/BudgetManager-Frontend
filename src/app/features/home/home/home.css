@@ -6,61 +6,63 @@
   background: #121212;
   color: #e0e0e0;
   font-family: "Fira Code Light", monospace;
+}
 
-  .content-box {
-    text-align: center;
-    padding: 3rem;
-    background: #1e1e1e;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+.content-box {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(30, 30, 30, 0.85);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: var(--accent-color, #ff4081);
+.content-box h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color, #ff4081);
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #bdbdbd;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+
+  &.btn-primary {
+    background: var(--accent-color, #ff4081);
+    color: #fff;
+    border: 1px solid var(--accent-color, #ff4081);
+
+    &:hover {
+      background: var(--accent-color-hover, #d73766);
+      transform: scale(1.05);
     }
+  }
 
-    p {
-      margin-bottom: 2rem;
-      font-size: 1rem;
-      color: #bdbdbd;
-    }
+  &.btn-secondary {
+    background: transparent;
+    color: var(--accent-color, #ff4081);
+    border: 2px solid var(--accent-color, #ff4081);
 
-    .buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-
-      .btn {
-        padding: 0.8rem 2rem;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background 0.3s ease, transform 0.2s ease;
-        cursor: pointer;
-
-        &.btn-primary {
-          background: var(--accent-color, #ff4081);
-          color: #fff;
-
-          &:hover {
-            background: var(--accent-color-hover, #d73766);
-            transform: scale(1.05);
-          }
-        }
-
-        &.btn-secondary {
-          background: transparent;
-          color: var(--accent-color, #ff4081);
-          border: 2px solid var(--accent-color, #ff4081);
-
-          &:hover {
-            background: var(--accent-color, #ff4081);
-            color: #fff;
-            transform: scale(1.05);
-          }
-        }
-      }
+    &:hover {
+      background: var(--accent-color, #ff4081);
+      color: #fff;
+      transform: scale(1.05);
     }
   }
 }

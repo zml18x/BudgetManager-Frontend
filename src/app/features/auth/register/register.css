@@ -10,12 +10,12 @@
 
 .register-box {
   text-align: center;
-  padding: 3rem;
-  background: #1e1e1e;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  padding: 2.5rem 2rem;
+  background: rgba(30, 30, 30, 0.85);
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
 }
 
 .register-box h1 {
@@ -31,12 +31,13 @@
 }
 
 .register-box input {
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background: #121212;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(18, 18, 18, 0.6);
   color: #e0e0e0;
   font-size: 1rem;
+  transition: border 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
 
 .register-box input::placeholder {
@@ -44,36 +45,38 @@
 }
 
 .register-box .btn {
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  border: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--accent-color, #ff4081);
+  background: transparent;
+  color: var(--accent-color, #ff4081);
+  font-size: 0.95rem;
+  width: fit-content;
+  align-self: center;
 }
 
-.register-box .btn-primary {
-  background: var(--accent-color, #ff4081);
-  color: #fff;
-}
-
-.register-box .btn-primary:hover {
-  background: var(--accent-color-hover, #d73766);
-  transform: scale(1.05);
+.register-box .btn:hover {
+  transform: scale(1.02);
 }
 
 .register-box input:focus {
   outline: none;
   border: 1px solid var(--accent-color, #ff4081);
+  transform: scale(1.02);
+  background: rgba(18, 18, 18, 0.8);
 }
 
 .register-box .error {
-  background-color: rgba(255, 0, 0, 0.1);
-  border-left: 4px solid #d73a49;
+  background-color: rgba(255, 0, 0, 0.08);
+  border-left: 3px solid #d73a49;
   color: #c70d17ac;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.4;
-  margin: -0.8rem 0 0.05rem 0;
+  margin: -0.7rem 0 0.05rem 0;
+  transition: background 0.2s ease;
 }
