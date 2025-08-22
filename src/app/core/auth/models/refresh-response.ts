@@ -1,4 +1,4 @@
-export interface TokenResponse {
+export interface RefreshResponse {
   tokenType: string | null;
   accessToken: string;
   expiresIn: number;
