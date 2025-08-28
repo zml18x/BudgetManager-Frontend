@@ -15,13 +15,6 @@
       />
       <div class="error" *ngIf="submitted && password?.errors">
         <span *ngIf="password?.errors?.['required']">Password is required</span>
-        <span *ngIf="password?.errors?.['minlength']"
-          >Password must be at least 8 characters</span
-        >
-        <span *ngIf="password?.errors?.['pattern']">
-          Password must contain uppercase and lowercase letters, a number, and a
-          special character
-        </span>
       </div>
 
       <button type="submit" class="btn btn-primary">Sign In</button>

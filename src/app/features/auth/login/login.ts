@@ -53,19 +53,9 @@ export class Login {
   }
 
   private buildForm(): void {
-    const passwordPattern =
-      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/;
-
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(8),
-          Validators.pattern(passwordPattern),
-        ],
-      ],
+      password: ['', [Validators.required]],
     });
   }
 
