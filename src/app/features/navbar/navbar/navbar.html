@@ -1,5 +1,26 @@
 <aside class="sidebar">
-  <div class="sidebar-logo">BUDGET MANAGER</div>
-  <button class="sidebar-logout" (click)="logout()">Wyloguj</button>
-  <nav class="sidebar-nav"></nav>
+  <div class="sidebar-header">
+    <div class="sidebar-logo">BUDGET MANAGER</div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a routerLink="/dashboard" class="nav-link">
+      <span class="link-text">Home</span>
+    </a>
+    <a routerLink="/budgets" class="nav-link">
+      <span class="link-text">Budgets</span>
+    </a>
+    <a routerLink="/reports" class="nav-link">
+      <span class="link-text">Raports</span>
+    </a>
+    <a routerLink="/profile" class="nav-link">
+      <span class="link-text">Profile</span>
+    </a>
+    <a routerLink="/settings" class="nav-link">
+      <span class="link-text">Settings</span>
+    </a>
+    <button class="nav-link sidebar-logout" (click)="logout()">
+      <span class="link-text">Logout</span>
+    </button>
+  </nav>
 </aside>

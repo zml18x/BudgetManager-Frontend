@@ -1,38 +1,68 @@
 .sidebar {
+  width: 240px;
   height: 100vh;
-  width: 220px;
-  background: #1e1e1e;
+  background: #141414;
   color: #e0e0e0;
+  font-family: "Fira Code Light", monospace;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-  font-family: "Fira Code Light", monospace;
+}
+
+.sidebar-header {
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: #141414;
+  color: var(--accent-color, #ff4081);
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .sidebar-logo {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 2rem;
-  color: var(--accent-color, #ff4081);
-  text-align: center;
+  text-transform: uppercase;
 }
 
 .sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 0.3rem;
   flex-grow: 1;
 }
 
-.sidebar-logout {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--accent-color, #ff4081);
-  background: transparent;
-  color: var(--accent-color, #ff4081);
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
   border-radius: 4px;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  background: transparent;
+  transition: background 0.25s ease, transform 0.2s ease, color 0.25s ease;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid var(--accent-color, #ff4081);
+  color: var(--accent-color, #ff4081);
+  transform: scale(1.02);
+}
+
+.sidebar-logout {
+  margin-top: auto;
+  background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .sidebar-logout:hover {
-  transform: scale(1.05);
+  background: rgba(255, 0, 0, 0.08);
+  border: 1px solid #d73a49;
+  color: #ff6b6b;
 }
