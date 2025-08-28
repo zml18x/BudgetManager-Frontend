@@ -1,0 +1,12 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  background: #121212;
+  color: #e0e0e0;
+  font-family: "Fira Code Light", monospace;
+}
+
+.dashboard-main {
+  flex-grow: 1;
+  padding: 2rem;
+}

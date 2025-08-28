@@ -8,8 +8,8 @@ import {
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, switchMap, throwError } from 'rxjs';
-import { AuthService } from './auth.service';
-import { RefreshResponse } from './models/refresh-response';
+import { AuthService } from '../auth/auth.service';
+import { RefreshResponse } from '../auth/models/refresh-response';
 import { environment } from '@environments/environment';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
@@ -54,13 +54,13 @@ function handle401(
           );
         }),
         catchError((err) => {
-          authService.removeTokens();
+          authService.logout();
           router.navigate(['/login']);
           return throwError(() => err);
         })
       );
   } else {
-    authService.removeTokens();
+    authService.logout();
     router.navigate(['/login']);
     return throwError(
       () => new Error('Authorization error. Please login again.')

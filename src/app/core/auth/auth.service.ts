@@ -5,6 +5,7 @@ import { RegisterRequest } from './models/register-request';
 import { TokenResponse } from './models/token-response';
 import { Injectable } from '@angular/core';
 import { environment } from '@environments/environment';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ import { environment } from '@environments/environment';
 export class AuthService {
   private readonly API_URL = environment.apiUrl;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   register(data: RegisterRequest) {
     return this.http.post(`${this.API_URL}/auth/register`, data);
@@ -57,7 +58,11 @@ export class AuthService {
     return localStorage.getItem('refreshToken');
   }
 
-  removeTokens(): void {
+  isAuthenticated(): boolean {
+    return this.getAccessToken() && this.getRefreshToken() ? true : false;
+  }
+
+  private removeTokens(): void {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
   }

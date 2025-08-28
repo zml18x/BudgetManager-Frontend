@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
   templateUrl: './register.html',
   styleUrl: './register.css',
 })
-export class RegisterComponent {
+export class Register {
   registerForm!: FormGroup;
   errorMessage: string | null = null;
   submitted: boolean = false;

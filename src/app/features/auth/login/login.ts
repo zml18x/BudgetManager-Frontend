@@ -16,7 +16,7 @@ import { AuthService } from '../../../core/auth/auth.service';
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })
-export class LoginComponent {
+export class Login {
   loginForm!: FormGroup;
   errorMessage: string | null = null;
   submitted: boolean = false;
@@ -44,7 +44,7 @@ export class LoginComponent {
 
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe({
-        next: () => this.router.navigate(['/']),
+        next: () => this.router.navigate(['/dashboard']),
         error: (err) =>
           (this.errorMessage =
             err?.error?.message || 'Login failed. Please try again.'),
